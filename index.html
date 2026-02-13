@@ -1,35 +1,67 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
   <head>
     <meta charset="UTF-8">
     <title>Reise nach Cornwall</title>
-<style>
-  body {
-    background-color: skyblue;
-    font-family: Arial;
-    text-align: center;
-    margin-top: 100px;
-  }
+    <style>
+      /* Hintergrund, Schrift und allgemeines Layout */
+      body {
+        background-color: skyblue;
+        font-family: Arial;
+        text-align: center; /* Text zentriert für Überschriften und Absätze */
+        margin-top: 50px;
+      }
 
-  ul {
-    display: inline-block;
-    text-align: left;
-    padding-left: 20px;
-  }
-</style>
+      /* Figure (Bild + Caption) */
+      figure {
+        display: block;       /* Figure als Blockelement */
+        width: 400px;         /* Breite entspricht Bildbreite */
+        margin: 0 auto;       /* zentriert Figure in der Seite */
+      }
+
+      /* Bild */
+      img {
+        display: block;
+        width: 400px;         /* feste Bildbreite */
+        border-radius: 15px;  /* abgerundete Ecken */
+      }
+
+      /* Bildbeschreibung */
+      figcaption {
+        text-align: left;     /* linksbündig unter dem Bild */
+        font-size: 14px;
+        margin-top: 5px;
+      }
+
+      /* Liste */
+      ul {
+        display: inline-block;       /* Liste als Block in der Mitte */
+        text-align: left;            /* Text innerhalb der Liste linksbündig */
+        padding-left: 0;
+        list-style-position: inside; /* Punkte direkt beim Text */
+        margin-top: 20px;            /* etwas Abstand nach oben */
+      }
+    </style>
   </head>
-  <body>
-<h1>Reise nach Cornwall</h1>
-<h2>12.06.2023 bis 23.06.2023</h2>
-    <p>1. Tag 12.06.2023 Mannheim Bundesgartenschau</p>
-<P>Übernachtung in Simmern, Moxy Simmern</p>
-<ul>
-<li>Bundesgartenschau</li>
-  <li>Fernsehturm</li>
-  <li>Wasserturm am Friedrichsplatz</li>
-</ul>
 
+  <body>
+    <h1>Reise nach Cornwall</h1>
+    <h2>12.06.2023 bis 23.06.2023</h2>
+
+    <p>1. Tag 12.06.2023 Mannheim Bundesgartenschau</p>
+    <p>Übernachtung in Simmern, Moxy Simmern</p>
+
+    <!-- Bild + Caption -->
+    <figure>
+      <img src="Dover-Castle.jpg" alt="Dover-Castle">
+      <figcaption>Dover-Castle</figcaption>
+    </figure>
+
+    <!-- Aufzählungsliste -->
+    <ul>
+      <li>Bundesgartenschau</li>
+      <li>Fernsehturm</li>
+      <li>Wasserturm am Friedrichsplatz</li>
+    </ul>
   </body>
 </html>
-
-
