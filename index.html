@@ -1,67 +1,215 @@
-<!DOCTYPE html> 
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Reise nach Cornwall</title>
-    <style>
-      /* Hintergrund, Schrift und allgemeines Layout */
-      body {
-        background-color: skyblue;
-        font-family: Arial;
-        text-align: center; /* Text zentriert für Überschriften und Absätze */
-        margin-top: 50px;
-      }
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reise nach Cornwall</title>
 
-      /* Figure (Bild + Caption) */
-      figure {
-        display: block;       /* Figure als Blockelement */
-        width: 400px;         /* Breite entspricht Bildbreite */
-        margin: 0 auto;       /* zentriert Figure in der Seite */
-      }
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, skyblue, #e6f7ff);
+  }
 
-      /* Bild */
-      img {
-        display: block;
-        width: 400px;         /* feste Bildbreite */
-        border-radius: 15px;  /* abgerundete Ecken */
-      }
+  .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  }
 
-      /* Bildbeschreibung */
-      figcaption {
-        text-align: left;     /* linksbündig unter dem Bild */
-        font-size: 14px;
-        margin-top: 5px;
-      }
+  .h1-container {
+    max-width: 1200px;
+    margin: 40px auto 10px auto;
+    text-align: center;
+  }
 
-      /* Liste */
-      ul {
-        display: inline-block;       /* Liste als Block in der Mitte */
-        text-align: left;            /* Text innerhalb der Liste linksbündig */
-        padding-left: 0;
-        list-style-position: inside; /* Punkte direkt beim Text */
-        margin-top: 20px;            /* etwas Abstand nach oben */
-      }
-    </style>
-  </head>
+  h2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
 
-  <body>
-    <h1>Reise nach Cornwall</h1>
-    <h2>12.06.2023 bis 23.06.2023</h2>
+  .reihe {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    margin-bottom: 60px;   /* Abstand zwischen Reihen */
+  }
 
-    <p>1. Tag 12.06.2023 Mannheim Bundesgartenschau</p>
-    <p>Übernachtung in Simmern, Moxy Simmern</p>
+  .reihe-text {
+    flex: 1;
+    max-width: 600px;      /* Textbreite */
+    line-height: 1.6;
+  }
 
-    <!-- Bild + Caption -->
-    <figure>
-      <img src="Dover-Castle.jpg" alt="Dover-Castle">
-      <figcaption>Dover-Castle</figcaption>
-    </figure>
+  .tages-ueberschrift {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
 
-    <!-- Aufzählungsliste -->
-    <ul>
-      <li>Bundesgartenschau</li>
-      <li>Fernsehturm</li>
-      <li>Wasserturm am Friedrichsplatz</li>
-    </ul>
-  </body>
+  .bilder-grid {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+
+  figcaption {
+    font-size: 14px;
+    margin-top: 6px;
+    text-align: center;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .reihe {
+      flex-direction: column;
+    }
+
+    .bilder-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .bilder-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+</style>
+</head>
+<body>
+
+<h1 class="h1-container">Reise nach Cornwall</h1>
+<h2>12.06.2023 bis 23.06.2023</h2>
+
+<div class="container">
+
+  <!-- 1. Tag -->
+  <div class="reihe">
+    <div class="reihe-text">
+      <div class="tages-ueberschrift">1. Tag – BUGA 23, Mannheim</div>
+      <p>
+        Die BUGA 2023 verwandelte das ehemalige Spinelli-Militärgelände dauerhaft
+        in einen großen, frei zugänglichen Landschaftspark mit Freizeitflächen.
+        Der Luisenpark wurde umfassend modernisiert und nachhaltig aufgewertet.
+        Zudem entsteht auf dem Spinelli-Areal ein klimafreundliches neues Wohnviertel.
+      </p>
+    </div>
+
+    <div class="bilder-grid">
+      <figure>
+        <img src="BUGA-Fernsehturm.jpg" alt="BUGA Fernsehturm">
+        <figcaption>BUGA 2023</figcaption>
+      </figure>
+      <figure>
+        <img src="BUGA-Gondelbahn.jpg" alt="BUGA Gondelbahn">
+        <figcaption>BUGA-Gondelbahn</figcaption>
+      </figure>
+      <figure>
+        <img src="BUGA2.jpg" alt="Pilz">
+        <figcaption>Pilz</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <!-- 2. Tag -->
+  <div class="reihe">
+    <div class="reihe-text">
+      
+        Der Wasserturm Mannheim ist ein 60 m hohes Wahrzeichen und Teil der ehemaligen städtischen Trinkwasserversorgung (1886–1889).
+        Er steht zentral auf dem Friedrichsplatz, umgeben von Wasserspielen, Gärten und einem beliebten Veranstaltungsort.
+      </p>
+    </div>
+
+    <div class="bilder-grid">
+      <figure>
+        <img src="Wasserturm_Brunnenseite.jpg" alt="Wasserturm">
+        <figcaption>Wasserturm</figcaption>
+      </figure>
+      <figure>
+        <img src="WasserturmIII.jpg" alt="Wasserturm Innen">
+        <figcaption>Wasserturm Innen</figcaption>
+      </figure>
+     
+    </div>
+  </div>
+
+  <!-- 3. Tag -->
+  <div class="reihe">
+    <div class="reihe-text">
+      
+      <p>
+        Moxy Simmern ist ein modernes Lifestyle-Hotel der Marke Marriott.
+        Die Lobby dient gleichzeitig als Bar und Treffpunkt,
+        das gesellige Ambiente ist ideal zum Plaudern und Entspannen.
+      </p>
+    </div>
+
+    <div class="bilder-grid">
+      <figure>
+        <img src="HotelMoxy3.jpg" alt="Hotel Moxy">
+        <figcaption>Hotel Moxy</figcaption>
+      </figure>
+      <figure>
+        <img src="HotelMoxy1.jpg" alt="Lobby">
+        <figcaption>Lobby</figcaption>
+      </figure>
+      
+    </div>
+  </div>
+
+  <!-- 2. Tag -->
+  <div class="reihe">
+    <div class="reihe-text">
+      <div class="tages-ueberschrift">2. Tag – Weiterfahrt über Calais nach Dover mit der Fähre</div>
+      <p>
+        Überfahrt mit der Fähre mit malerischer Aussicht auf das Meer, die Küste und die Kreidefelsen in Dover. 
+        Fahrzeit ca. 90 Minuten
+      </p>
+    </div>
+
+    <div class="bilder-grid">
+      <figure>
+        <img src="HafenCalais.jpg" alt="Calais">
+        <figcaption>Hafen Calais</figcaption>
+      </figure>
+      <figure>
+        <img src="Hafen_CalaisII.jpg" alt="Dover">
+        <figcaption>Anlegestelle Calais</figcaption>
+      </figure>
+      <figure>
+        <img src="Maria_auf_Fähre.jpg" alt="Dover Castle">
+        <figcaption>Auf der Fähre</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <!-- Weitere Tage einfach hier hinzufügen -->
+
+</div>
+
+</body>
 </html>
